@@ -9,10 +9,8 @@ class Solution(object):
         count=0
         while i < len(words):
             s = words[i:i+1]
-            l =''.join(s)
-            print(l)        
+            l =''.join(s)       
             l = l[0:len(pref)]
-            print(l)
             if l == pref:
                 count = count+1
             l=''
