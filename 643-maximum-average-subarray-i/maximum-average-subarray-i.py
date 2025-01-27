@@ -14,7 +14,6 @@ class Solution(object):
         for i in range(k, len(nums)):
             s += nums[i]
             s -= nums[i-k]
-            print(s)
             result = max(result,s)
         return float(result)/k
             
