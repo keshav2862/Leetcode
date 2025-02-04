@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: int
         """
         gl = gain
-        print(gl)
         ans=[0]*(len(gl)+1)
         i=0
         while i < len(gl):
