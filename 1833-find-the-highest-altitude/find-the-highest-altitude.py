@@ -4,7 +4,7 @@ class Solution(object):
         :type gain: List[int]
         :rtype: int
         """
-        gl = list(gain)
+        gl = gain
         print(gl)
         ans=[0]*(len(gl)+1)
         i=0
