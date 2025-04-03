@@ -23,7 +23,6 @@ class Solution(object):
         hm = num%1000 - num%100
         tm = num%100 - num%10
         om = num%10
-        print(t,hm,tm,om)
         result = ""
         keys = sorted(hmap.keys(), reverse=True)
         for val in keys:
