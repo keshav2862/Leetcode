@@ -14,7 +14,6 @@ class Solution(object):
             return output
         while n not in visit:
             visit.add(n)
-            print(visit)
             n = get_next_number(n)
             if n == 1:
                 return True
