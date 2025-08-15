@@ -11,8 +11,3 @@ class Solution(object):
             if complement in numap:
                 return [i,numap[complement]]
             numap[nums[i]] = i
-
-
-
-             
-        
