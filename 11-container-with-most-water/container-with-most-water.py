@@ -19,7 +19,3 @@ class Solution(object):
                 start = start + 1
             i = i+1
         return max(area)
-
-
-            
-        
