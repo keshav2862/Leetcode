@@ -25,7 +25,3 @@ class Solution(object):
         if count == len(s):
             return True
         return False
-        
-
-        
-        
