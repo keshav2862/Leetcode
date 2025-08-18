@@ -7,17 +7,15 @@ class Solution(object):
         st = 0
         e = 0
         l = 0
-        ans = []
+        ans = set()
         while st<=e and e<len(s):
             if s[e] not in ans:
-                ans.append(s[e]) 
+                ans.add(s[e]) 
+                l = max(l,e-st+1)
                 e = e + 1
-                l = max(l,len(s[st:e]))
             else:
-                st = st +1
-                e = st
-                ans = []
-
+                ans.remove(s[st])
+                st = st+1
         return l
                 
             
