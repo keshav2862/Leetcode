@@ -14,8 +14,6 @@ class Solution(object):
 
         for i in range(1, len(intervals)):
             x = intervals[i]
-            y = intervals[i - 1] 
-
             if x[0] > e:
                 s = x[0]
                 e = x[1]
@@ -23,5 +21,4 @@ class Solution(object):
             else:
                 e = max(e, x[1])
                 inter[-1] = [s, e]
-
         return inter
