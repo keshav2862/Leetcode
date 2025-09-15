@@ -9,7 +9,6 @@ class Solution(object):
         l = list(brokenLetters)
         n = []
         flag = 0
-        print(l,w)
         for x in w:
             for a in l:
                 if a in x:
