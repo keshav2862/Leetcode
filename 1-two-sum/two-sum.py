@@ -5,9 +5,9 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        numap ={}
+        x = {}
         for i in range(len(nums)):
-            complement = target - nums[i]
-            if complement in numap:
-                return [i,numap[complement]]
-            numap[nums[i]] = i
+            c = target - nums[i]
+            if c in x:
+                return[i,x[c]]
+            x[nums[i]] = i
