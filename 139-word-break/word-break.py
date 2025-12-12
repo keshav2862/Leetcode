@@ -11,5 +11,5 @@ class Solution(object):
                 start = i - len(w)
                 if start >= 0 and dp[start] and s[start:i] == w:
                     dp[i] = True
-                    break
+        print(dp)
         return dp[-1]
