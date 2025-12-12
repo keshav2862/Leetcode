@@ -17,11 +17,11 @@ class Solution(object):
             a = dfs(r+1,c,k+1) or dfs(r-1, c, k+1) or dfs(r, c+1, k+1) or dfs(r, c-1, k+1)
             v.remove((r,c))
             return a
-        # count = {}
-        # for c in word:
-        #     count[c] = 1 + count.get(c, 0)
-        # if count[word[0]] > count[word[-1]]:
-        #     word = word[::-1]
+        count = {}
+        for c in word:
+            count[c] = 1 + count.get(c, 0)
+        if count[word[0]] > count[word[-1]]:
+            word = word[::-1]
         for r in range(row):
             for c in range(col):
                 if dfs(r, c, 0): return True        
