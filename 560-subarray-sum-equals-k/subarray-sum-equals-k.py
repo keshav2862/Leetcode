@@ -10,7 +10,6 @@ class Solution(object):
         f = {0:1}
         for i in range(len(nums)):
             prefsum = prefsum + nums[i]
-            diff = prefsum - k
-            ans = ans + f.get(diff,0)
+            ans = ans + f.get((prefsum-k),0)
             f[prefsum] = f.get(prefsum,0) + 1
         return ans
