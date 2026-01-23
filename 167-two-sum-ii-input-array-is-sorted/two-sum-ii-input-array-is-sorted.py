@@ -17,4 +17,4 @@ class Solution(object):
                     s = s+1
                 else:
                     e = e-1
-            
+                    
