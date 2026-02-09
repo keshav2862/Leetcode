@@ -5,15 +5,14 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        if len(s) !=len(t):
+        if len(s)!=len(t):
             return False
-        count1 = {}
-        count2 = {}
+        freq1 = {}
+        freq2 = {}
         for i in s:
-            count1[i] = count1.get(i,0)+1
-        for j in t:
-            count2[j] = count2.get(j,0)+1
-        if count1 == count2:
-            print(count1)
+            freq1[i] = freq1.get(i,0) + 1
+        for i in t:
+            freq2[i] = freq2.get(i,0) + 1
+        if freq1 == freq2:
             return True
-        return False     
+        return False
