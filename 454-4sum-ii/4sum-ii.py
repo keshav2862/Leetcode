@@ -7,7 +7,7 @@ class Solution(object):
         :type nums4: List[int]
         :rtype: int
         """
-        hmap = defaultdict(int)
+        hmap = {}
         count = 0
         for i in nums1:
             for j in nums2:
