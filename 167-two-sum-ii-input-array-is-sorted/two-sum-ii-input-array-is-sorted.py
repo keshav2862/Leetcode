@@ -8,13 +8,11 @@ class Solution(object):
         n = len(numbers)
         s = 0
         e = n-1
-        while s < e:
-            flag = numbers[s] + numbers[e]
-            if flag == target:
-                return s+1,e+1
+        while s<e:
+            val = numbers[s] + numbers[e]
+            if val == target:
+                return [s+1,e+1]
+            elif val < target:
+                s = s+1
             else:
-                if flag < target:
-                    s = s+1
-                else:
-                    e = e-1
-                    
+                e = e-1
