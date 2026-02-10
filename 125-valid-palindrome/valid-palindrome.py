@@ -1,16 +1,17 @@
-import re
 class Solution(object):
     def isPalindrome(self, s):
         """
         :type s: str
         :rtype: bool
         """
-        cs = re.sub(r'[^a-zA-Z0-9]', '', s)
-        print cs
-        cs = cs.lower()
-        rs = cs[::-1]
-
-        
-        if cs == rs:
-            return True
-        return False
+        news = ''.join([char for char in s if char.isalnum()])
+        string1 = lower(news)
+        left = 0
+        right = len(string1)-1
+        while left<right:
+            if string1[left]==string1[right]:
+                left = left+1
+                right = right-1
+            else:
+                return False
+        return True
