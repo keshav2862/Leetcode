@@ -4,26 +4,26 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        result = []
         nums.sort()
-        
-        for i, num in enumerate(nums):
-            if num > 0:
-                break  
-            if i > 0 and num == nums[i - 1]:
-                continue  
-            left, right = i + 1, len(nums) - 1 
-            while left < right:
-                total = num + nums[left] + nums[right]
-                
-                if total > 0:
-                    right -= 1  
+        n = len(nums)
+        ans = []
+        for i in range(n):
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+            s = i+1
+            e = n-1            
+            while s < e:
+                total = nums[i] + nums[s] + nums[e]
+                if total == 0:
+                    ans.append([nums[i],nums[s],nums[e]])
+                    s = s+1
+                    e = e-1
+                    while s<e and nums[s] == nums[s - 1]:
+                        s = s+1
+                    while s < e and nums[e] == nums[e + 1]:
+                        e = e-1
                 elif total < 0:
-                    left += 1  
+                    s = s+1
                 else:
-                    result.append([num, nums[left], nums[right]]) 
-                    left += 1
-                    right -= 1
-                    while left < right and nums[left] == nums[left - 1]:
-                        left += 1
-        return result
+                    e=e-1
+        return ans
