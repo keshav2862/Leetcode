@@ -20,8 +20,8 @@ class Solution(object):
                     e = e-1
                     while s<e and nums[s] == nums[s - 1]:
                         s = s+1
-                    while s < e and nums[e] == nums[e + 1]:
-                        e = e-1
+                    # while s<e and nums[e] == nums[e + 1]:
+                    #     e = e-1
                 elif total < 0:
                     s = s+1
                 else:
