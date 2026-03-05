@@ -4,9 +4,9 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        mini = prices[0]
-        maxi = 0
-        for i in prices[1:]:
-           maxi = max(maxi, i - mini)
-           mini = min(mini, i)
-        return maxi 
+        minprice = float('inf')
+        maxprof = 0
+        for i in prices:
+            minprice = min(minprice,i)
+            maxprof = max(maxprof,i - minprice)
+        return maxprof
