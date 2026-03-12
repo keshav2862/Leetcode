@@ -5,11 +5,11 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
+        count = 0
         prefsum = 0
-        ans = 0
-        f = {0:1}
-        for i in range(len(nums)):
-            prefsum = prefsum + nums[i]
-            ans = ans + f.get((prefsum-k),0)
-            f[prefsum] = f.get(prefsum,0) + 1
-        return ans
+        seen = {0:1}
+        for i in nums:
+            prefsum = prefsum + i
+            count = count +  seen.get(prefsum-k,0)
+            seen[prefsum] = seen.get(prefsum,0) + 1
+        return count
