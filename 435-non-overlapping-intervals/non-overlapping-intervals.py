@@ -13,6 +13,5 @@ class Solution(object):
                 prevend = x[1]
             else:
                 count += 1
-                prevend = min(prevend, x[1])
-                
+                prevend = min(prevend, x[1])   
         return count
