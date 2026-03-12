@@ -7,7 +7,7 @@ class Solution(object):
         """
         k = k%len(nums)
         n = len(nums)
-        a = n* [0]
+        a = n*[0]
         for i in range(n):
             a[(i + k) % n] = nums[i]    
         for i in range(n):
