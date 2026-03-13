@@ -17,8 +17,8 @@ class Solution(object):
                 current.next = list1
                 list1 = list1.next
             else:
-                current.next=list2
+                current.next = list2
                 list2 = list2.next
-            current=current.next
+            current = current.next
         current.next = list1 or list2
         return head.next
