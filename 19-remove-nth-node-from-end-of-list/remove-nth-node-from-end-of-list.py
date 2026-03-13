@@ -13,13 +13,12 @@ class Solution(object):
         dummy = ListNode(0)
         dummy.next = head
         l = 0
-        current = head
-        while current:
+        curr = head
+        while curr:
             l = l+1
-            current = current.next
-        current = dummy 
+            curr = curr.next
+        curr = dummy
         for i in range(l-n):
-            current = current.next
-        current.next = current.next.next
+            curr = curr.next
+        curr.next = curr.next.next
         return dummy.next
-        
