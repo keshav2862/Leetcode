@@ -9,7 +9,7 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        dummy = ListNode(0)
+        dummy = ListNode()
         dummy.next = head
         prev = dummy
         curr = head
@@ -19,9 +19,11 @@ class Solution(object):
                     curr = curr.next
                 prev.next = curr.next
             else:
-                prev = prev.next
+                prev = curr
             curr = curr.next
         return dummy.next
+            
+        
                 
             
         
