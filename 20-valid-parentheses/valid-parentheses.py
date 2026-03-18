@@ -5,15 +5,12 @@ class Solution(object):
         :rtype: bool
         """
         stack = []
-        hash = {')': '(', ']': '[', '}': '{'}
-
-        for char in s:
-            if char in hash:
-                if stack and stack[-1] == hash[char]:
-                    stack.pop()  
-                else:
-                    return False 
-            else:
-                stack.append(char)
-        
-        return not stack
+        pairs = {')': '(', '}': '{', ']': '['}
+        for ch in s:
+            if ch in '({[':
+                stack.append(ch)
+            elif ch in ')}]':
+                if not stack or stack[-1] != pairs[ch]:
+                    return False
+                stack.pop()
+        return len(stack) == 0
