@@ -11,5 +11,4 @@ class Solution:
                 break
             else:
                 ans.append(a)
-
         return ans
