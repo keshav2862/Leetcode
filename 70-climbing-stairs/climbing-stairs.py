@@ -1,16 +1,12 @@
-class Solution(object):
-    def climbStairs(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
+class Solution:
+    def climbStairs(self, n: int) -> int:
         if n<=3:
             return n
         p = 3
         pp = 2
         cur = 0
         for i in range(3,n):
-            cur = p + pp
+            cur = p+pp
             pp = p
             p = cur
         return cur
